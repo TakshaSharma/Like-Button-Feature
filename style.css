@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+ }
+
+html, body{
+    height: 100%;
+    width: 100%;
+} 
+body{
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+#container{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    border-radius: 7px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#container i{
+    color: #fff;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;                            /** common technique to center any element relative to its parent container **/
+    transform: translate(-50%, -50%) scale(0);  /** can use transform only once that is why translate and scale are together **/
+    opacity: 0;
+    transition: all ease 0.4s;
+}
